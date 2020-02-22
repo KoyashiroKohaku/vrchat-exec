@@ -6,7 +6,9 @@
     <title>vrc-exec</title>
     <script type="text/javascript">
       window.addEventListener('load', event => {
-        if (window.location.search.length <= 1) {
+        const param = window.location.search.slice(1)
+        
+        if (param.length <= 8 && param.slice(0, 8) !== '?vrchat:') {
           return
         }
 
